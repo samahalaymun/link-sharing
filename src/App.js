@@ -26,9 +26,9 @@ function App() {
     dispatch(linksActions.addToPreviewLinks(previewLinks));
     dispatch(profileActions.updateProfileDetails(previewProfile));
   }, [dispatch]);
-  console.log(profile)
+  
   return (
-    <Router>
+    <Router basename="/">
       <ChakraProvider theme={theme}>
         <Layout>
           <Routes>
