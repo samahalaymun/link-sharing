@@ -17,10 +17,12 @@ function App() {
   const links = useSelector((state) => state.links);
    const profile = useSelector((state) => state.profile.profileDetails);
   const [previewLinks] = useLocalStorage("previewLinks", []);
-  const [previewProfile] = useLocalStorage(
-    "previewProfile",
-    {}
-  );
+  const [previewProfile] = useLocalStorage("previewProfile", {
+    imgURL: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+  });
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(linksActions.addToPreviewLinks(previewLinks));

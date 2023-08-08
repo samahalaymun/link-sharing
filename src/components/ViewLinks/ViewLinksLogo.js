@@ -4,6 +4,7 @@ import LinkItem from "./LinkItem";
 import { AiFillYoutube } from "react-icons/ai";
 import "../../App.css"
 const ViewLinksLogo = ({ avatar, username, email, links }) => {
+  console.log(username)
   return (
     <svg
       width="308"

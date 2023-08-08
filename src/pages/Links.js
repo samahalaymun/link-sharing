@@ -16,7 +16,11 @@ const Links = ({ previewLinks, profile }) => {
         <ViewLinks
           links={previewLinks}
           avatar={profile.imgURL}
-          username={profile.firstName + " " + profile.lastName}
+          username={
+            profile.firstName &&
+            profile.lastName &&
+            profile.firstName + " " + profile.lastName
+          }
           email={profile.email}
         />
       </>
